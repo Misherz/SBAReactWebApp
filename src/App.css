@@ -3,10 +3,31 @@
 
 
 body {
-  background-color: hsl(36, 65%, 91%);
+  position: relative;
+  background-color: hsl(36, 65%, 91%); 
 }
 
+body::before {
+  content: ''; 
+  position: absolute;
+  top: 0;
+  left: 0;
+  width:200%;
+  height: 100%;
+  background-image: url(./images/scales.png);
+  object-fit: cover;
+  background-position: center;
+  background-repeat: repeat;
+  opacity: 0.3;
+}
+
+.Test {
+  position: relative; 
+}
+
+/*Article Container*/
 .articleGallery{
+  z-index: 1;
   .grid-container{
     margin: 0 auto;
     display: grid;
@@ -23,11 +44,12 @@ body {
   display: inline-block;
   padding: 2em;
   margin: 1em;
-  border-radius: 2em;
+  border-radius: 1em;
   margin: 3em;
   background-color: rgb(92, 121, 115);
   max-width: 40%;
   min-height: 100%;
+  color: ##F5E8C7;
 
 }
 
@@ -37,10 +59,8 @@ body {
   max-width: 40%;
   border-radius: 2em;
   transition: transform .2s;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: white solid 1em;
+  border: #F5E8C7 solid 0.2em;
+  
 
 }
 
@@ -51,26 +71,42 @@ body {
 
 /*Article Header*/
 .articleHeader{
-  background-color: #a3744dd7;
-  border-radius: 1em;
+  background-color:  rgb(100, 135, 128);
+  border-radius: 0.5em;
   display: flex;
   justify-content: center;
   padding: 2%;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-size: 2em;
-
 }
 
-/*Header*/
+/*Read More Button*/
+a{
+  color: #F8FAE5;
+}
+
+a:hover{
+  color: #F8FAE5;
+}
+.bottomContent{
+  padding: 1.5em;
+  background-color: #6F4C5B;
+}
+.bottomContent:hover {
+  background-color: #936277; 
+}
+
+
+
+
+/*Nav Bar*/
 .headerTab{
   background-color: #0e3a39;
   padding: 10px 10px 10px 40px;
   color: #F8FAE5;
   top: 0; 
   width: 100%; 
-
 }
-
 
 .header{
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -85,21 +121,10 @@ body {
   font-style: normal;
 }
 
-/*bottomContent*/
-a{
-  color: #F8FAE5;
+.Test{
+  
 }
 
-a:hover{
-  color: #F8FAE5;
-}
-.bottomContent{
-  padding: 1.5em;
-  background-color: #903f0c;
-}
-.bottomContent:hover {
-  background-color: #ab4d12; 
-}
 
 
 /*Footer*/

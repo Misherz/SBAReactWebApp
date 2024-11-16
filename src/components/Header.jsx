@@ -6,8 +6,8 @@ export default function Header(){
   
     return (
       <div className="headerTab">
+              <h2 className="textContent">{day}/{month}/{year}🐉</h2>
         <h1 className="header">SCALES OF TRUTH</h1>
-        <h2 className="textContent">{day}/{month}/{year}🐉</h2>
       </div>
     )
 }

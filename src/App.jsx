@@ -4,13 +4,14 @@ import { getData } from './data/data.mjs'
 import Header from './components/Header'
 import Footer from './components/Footer'
 
+
 function App() {
   const [articles, setArticle] = useState([]);
 
   //must do a useState for removed articles
 
   //Getting data from axios
-  async function getArticles(){
+  async function getArticles() {
     try {
       const data = await getData();
       setArticle(data.articles)
@@ -21,13 +22,13 @@ function App() {
   }
   //Invoke data with [], runs only on mount
   useEffect(() => {
-    getArticles(); 
-  }, []); 
+    getArticles();
+  }, []);
 
   //mapping over articles with ternary to retrieve them
-  function displayArticles(){
+  function displayArticles() {
     return articles.length > 0 ? (
-      <div className="articleGallery"> 
+      <div className="articleGallery">
         {articles.map((article, index) => (
           <div key={index} className="articleData">
             <h2 className="articleHeader">{article.title}</h2>
@@ -48,7 +49,7 @@ function App() {
 
 
   return (
-    <div>
+    <div className='Test'>
       <Header /><br /><br /><br />
       <div>{displayArticles()}</div><br />
       <Footer />
