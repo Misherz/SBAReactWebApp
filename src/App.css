@@ -65,9 +65,9 @@ body {
   background-color: #03093b;
   padding: 10px 10px 10px 40px;
   color: #F8FAE5;
-  position: fixed; /* Set the navbar to fixed position */
-  top: 0; /* Position the navbar at the top of the page */
-  width: 100%; /* Full width */
+  position: fixed; /
+  top: 0; 
+  width: 100%; 
   font-size: 8px;
 
 }
