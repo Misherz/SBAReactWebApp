@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import './App.css'
 import { getData } from './data/data.mjs'
 import Header from './components/Header'
+import Footer from './components/Footer'
 
 function App() {
   const [articles, setArticle] = useState([]);
@@ -47,10 +48,11 @@ function App() {
 
 
   return (
-    <>
+    <div>
       <Header /><br /><br /><br />
-      <div>{displayArticles()}</div>
-    </>
+      <div>{displayArticles()}</div><br />
+      <Footer />
+    </div>
   )
 }
 
