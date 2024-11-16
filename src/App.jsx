@@ -1,18 +1,30 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './App.css'
 import { getData } from './data/data.mjs'
+import Header from './components/Header'
 
 function App() {
-  const today = new Date()
-  const day = today.getDate()
-  const month = today.getMonth()
-  const year= today.getFullYear();
+  const [articles, setArticle] = useState([])
 
-  
+  async function getArticles(){
+    try {
+      const data = await getData();
+      setArticle(data.articles)
+
+    } catch (err) {
+      console.error("Cannot get article", err)
+    }
+  }
+  useEffect(() => {
+    getArticles(); 
+  }, []); 
 
   return (
     <>
-      <h1>Top News of {day}/{month}/{year}</h1>
+      <Header /><hr />
+      <div className='articles'>
+
+      </div>
     </>
   )
 }
