@@ -3,6 +3,7 @@ import './App.css'
 import { getData } from './data/data.mjs'
 import Header from './components/Header'
 import Footer from './components/Footer'
+import { useNavigate } from 'react-router-dom'
 
 
 function App() {

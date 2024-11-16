@@ -12,7 +12,7 @@ body::before {
   position: absolute;
   top: 0;
   left: 0;
-  width:200%;
+  width:102%;
   height: 100%;
   background-image: url(./images/scales2.webp);
   object-fit: cover;
@@ -37,6 +37,7 @@ body::before {
     width: 60vw;
     height: 450px;
 }
+
 }
 
 /*Each section of article*/
@@ -49,7 +50,7 @@ body::before {
   background-color: rgb(92, 121, 115);
   max-width: 40%;
   min-height: 100%;
-  color: ##F5E8C7;
+  color: #F5E8C7;
 
 }
 
@@ -108,11 +109,32 @@ a:hover{
   width: 100%; 
 }
 
+.headerTab{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0.1em;
+}
+
 .header{
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-weight: 400;
   font-style: normal;
-  
+  background-color: #0e3a39;
+  outline: none;
+}
+
+.menuButton:focus {
+  box-shadow: 0 0 0 3px rgba(100, 135, 128, 0.5); 
+}
+
+.headerButton{
+  outline: none;
+  background-color: #0e3a39;
+  padding: 0.1em;
+  border: none;
+  cursor: pointer;
+
 }
 
 .textContent{
@@ -121,22 +143,26 @@ a:hover{
   font-style: normal;
 }
 
-.Test{
-  
-}
-
-
 
 /*Footer*/
 footer{
   background-color: rgb(150, 167, 163);
   height: 100%;
   width: 100%;
-  padding: 1em;
+  padding: 2em;
 }
 
 footer{
   font-size: 1em;
   text-align: center;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.menuButton {
+  background-color: rgb(100, 135, 128);
+  padding: 0.5em;
+  font-size: 30px;
+  border-radius: 80%;
+  border: none;
+  cursor: pointer;
 }
