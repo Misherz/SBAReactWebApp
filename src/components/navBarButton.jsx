@@ -1,6 +1,11 @@
+import { Link } from 'react-router-dom';
 
-export default function NavBarMenu(){
+export default function NavBarMenu() {
     return (
-    <button type="button" className="menuButton">🐲</button>
-)
+        <div>
+            <Link to="/Home">
+                <button type="button" className="menuButton">🐲</button>
+            </Link>
+        </div>
+    );
 }

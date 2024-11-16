@@ -3,7 +3,10 @@ import './App.css'
 import { getData } from './data/data.mjs'
 import Header from './components/Header'
 import Footer from './components/Footer'
-import { useNavigate } from 'react-router-dom'
+import { BrowserRouter as Router } from 'react-router-dom';
+import MenuItems from './components/MenuItems'
+import React from 'react'
+
 
 
 function App() {
@@ -26,20 +29,37 @@ function App() {
     getArticles();
   }, []);
 
+  const imgDisplay = {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center'
+  };
+
   //mapping over articles with ternary to retrieve them
   function displayArticles() {
     return articles.length > 0 ? (
       <div className="articleGallery">
         {articles.map((article, index) => (
           <div key={index} className="articleData">
+
             <h2 className="articleHeader">{article.title}</h2>
+            <p>Author: {article.author}</p>
+            <p>News:</p>
             <p>{article.description}</p>
             <p>{article.content}</p>
-            <img src={article.urlToImage} alt={article.title} className="articleImage" />
-            <p>Source: {article.source.name}</p>
-            <button className="bottomContent">
-              <a href={article.url}>Read the full article</a>
-            </button>
+            
+
+            <div style={imgDisplay}>
+              <img src={article.urlToImage} alt={article.title} className="articleImage" />
+            </div><br />
+           
+  
+            <div className='buttonContent'>
+              <button className="bottomContent">
+                <a href={article.url}>Read the full article</a>
+              </button>
+            </div><br />
+            <p>Source: {article.source.name}</p><br />
           </div>
         ))}
       </div>
@@ -50,11 +70,14 @@ function App() {
 
 
   return (
-    <div className='Test'>
-      <Header /><br /><br /><br />
-      <div>{displayArticles()}</div><br />
-      <Footer />
-    </div>
+    <Router>
+      <div className='Test'>
+        <Header />
+        <MenuItems />
+        <div>{displayArticles()}</div><br />
+        <Footer />
+      </div>
+    </Router>
   )
 }
 

@@ -1,4 +1,5 @@
 import NavBarMenu from "./navBarButton";
+import React from "react";
 
 export default function Header(){
     const today = new Date()
@@ -9,8 +10,8 @@ export default function Header(){
     return (
       <div className="headerTab">
         <h2 className="textContent">{day}/{month + 1}/{year}</h2>
-        <button className="headerButton"><h1 className="header">SCALES OF TRUTH🐉</h1></button>
-        <NavBarMenu />
+        <h1 className="header" >SCALES OF TRUTH🐉</h1>        
+        <NavBarMenu /><br/>
       </div>
     )
 }
