@@ -6,7 +6,7 @@ export default function Header(){
   
     return (
       <>
-        <h1>Top News of {day}/{month}/{year}</h1>
+        <h1>Top News of {day}/{month}/{year}🤓</h1>
       </>
     )
 }
