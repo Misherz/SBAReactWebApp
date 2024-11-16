@@ -5,8 +5,9 @@ export default function Header(){
     const year= today.getFullYear();
   
     return (
-      <>
-        <h1>Top News of {day}/{month}/{year}🤓</h1>
-      </>
+      <div className="headerTab">
+        <h1 className="header">SCALES OF TRUTH</h1>
+        <h2 className="textContent">{day}/{month}/{year}🐉</h2>
+      </div>
     )
 }
