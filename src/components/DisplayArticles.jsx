@@ -29,9 +29,12 @@ export default function DisplayArticles() {
     alignItems: 'center'
   };
 
-    return articles.length > 0 ? (
+  //action to not display articles that has been removed
+  const removedArticle = articles.filter(article => article.name !== '[Removed]');
+
+    return removedArticle.length > 0 ? (
       <div className="articleGallery">
-        {articles.map((article, index) => (
+        {removedArticle.map((article, index) => (
           <div key={index} className="articleData">
 
             <h2 className="articleHeader">{article.title}</h2>
@@ -56,6 +59,9 @@ export default function DisplayArticles() {
         ))}
       </div>
     ) : (
-      <p>Sorry! We're having some troubles loading this article. 😔</p>
+      <p>Sorry! We're having some troubles loading the articles. 😔</p>
     );
   }
+
+  
+    
