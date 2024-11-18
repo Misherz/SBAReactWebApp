@@ -1,7 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
+// import helpPg from './pages/Help'
+// import aboutPg from './pages/About'
+// import contactPg from './pages/Contact'
+import { useNavigate } from "react-router-dom";
 
 export default function MenuItems(){
+
+    function onClick(){
+        let nav = useNavigate();
+        nav('/')
+
+    }
+
     return (
     <div className="menuTab"> 
         <Link to={'/About'}>
