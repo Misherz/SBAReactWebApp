@@ -4,7 +4,7 @@ export default function Footer(){
     const year= today.getFullYear();
 
     return(
-        <div>
+        <div className="footerPg">
             <footer>
                 <p>Copyright @ {year}</p>
             </footer>
